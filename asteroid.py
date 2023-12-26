@@ -16,17 +16,8 @@ class Asteroid(object):
         # ASTEROID
         self.asteroid_img = pygame.image.load("/Users/jakubmierzynski/Desktop/Pygame/asteroid3.png")
         self.asteroid_model = pygame.transform.scale(self.asteroid_img, (100, 100))
-        self.rocket_rect = self.asteroid_model.get_rect()
-        self.rocket_mask = pygame.mask.from_surface(self.asteroid_model)
-
-        # ROCKET MASK
-        self.rocket_mask = pygame.mask.from_surface(self.asteroid_model)
-        self.rocket_mask_pos = self.pos
-        self.mask_image = self.rocket_mask.to_surface()
-
-        # SPACE KEY
-        self.space_pressed = False
-
+        self.asteroid_rect = self.asteroid_model.get_rect()
+        self.asteroid_mask = pygame.mask.from_surface(self.asteroid_model)
 
     def tick(self):
         # Physics

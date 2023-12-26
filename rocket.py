@@ -23,15 +23,10 @@ class Rocket(object):
         self.rocket_model = pygame.transform.scale(self.rocket_img, (100, 100))
         self.rotated_model = pygame.transform.rotate(self.rocket_model, -90)
         self.rocket_rect = self.rotated_model.get_rect()
-        self.rocket_mask = pygame.mask.from_surface(self.rotated_model)
-
-        # self.rocket_rect = self.rocket_model.get_rect()
-        # self.rocket_mask = pygame.mask.from_surface(self.rocket_model)
 
         # ROCKET MASK
-        self.rocket_mask = pygame.mask.from_surface(self.rocket_model)
+        self.rocket_mask = pygame.mask.from_surface(self.rotated_model)
         self.rocket_mask_pos = self.pos
-        self.mask_image = self.rocket_mask.to_surface()
 
         # SPACE KEY
         self.space_pressed = False
